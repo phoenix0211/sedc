@@ -1,0 +1,164 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<!-- including static files -->
+<link rel="stylesheet" type="text/css" href="{% static 'about/login.css' %}" />
+<link rel=""
+<html lang="en">
+<head>
+	<title>Login Page</title>
+	<meta charset="UTF-8">
+<!-- below meta tag is for responsive design-->
+	<meta name="viewport" content="width-device-width, initial-scale=1">
+<!--CSS file included-->
+	<link rel="stylesheet" href="login.css">
+<!--bootstrap file inlcuded-->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<!-- JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<!-- icons included -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+	<section class="menu menu--circle">
+  <input type="checkbox" id="menu__active"/>
+  <label for="menu__active" class="menu__active">
+    <div class="menu__toggle">
+      <div class="icon">
+        <div class="hamburger"></div>
+      </div>
+    </div>
+    <input type="radio" name="arrow--up" id="degree--up-0"/>
+    <input type="radio" name="arrow--up" id="degree--up-1" />
+    <input type="radio" name="arrow--up" id="degree--up-2" />
+    <div class="menu__listings">
+      <ul class="circle">
+        <li>
+          <div class="placeholder">
+            <div class="upside">
+              <a href="login.html" class="button" title="Login"><i class="fa fa-sign-in"></i></a>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="placeholder">
+            <div class="upside">
+              <a href="login.html" class="button" title="Login"><i class="fa fa-sign-in"></i></a>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="placeholder">
+            <div class="upside">
+             <a href="login.html" class="button" title="Login"><i class="fa fa-sign-in"></i></a>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="placeholder">
+            <div class="upside">
+              <a href="login.html" class="button" title="Login"><i class="fa fa-sign-in"></i></a>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="placeholder">
+            <div class="upside">
+              <a href="login.html" class="button" title="Login"><i class="fa fa-sign-in"></i></a>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="placeholder">
+            <div class="upside">
+              <a href="login.html" class="button" title="Login"><i class="fa fa-sign-in"></i></a>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="placeholder">
+            <div class="upside">
+              <a href="about.html" class="button" title="Log out"><i class="fa fa-sign-out"></i></a>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="placeholder">
+            <div class="upside">
+             <a href="qrcode.html" class="button" title="QR Code"><i class="fa fa-qrcode"></i></a>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="placeholder">
+            <div class="upside">
+              <a href="upload.html" class="button" title="Upload"><i class="fa fa-upload"></i></a>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="placeholder">
+            <div class="upside">
+              <a href="login.html" class="button" title="Login"><i class="fa fa-sign-in"></i></a>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div class="menu__arrow menu__arrow--top">
+      <ul>
+        <li>
+          <label for="degree--up-0"><div class="arrow"></div></label>
+          <label for="degree--up-1"><div class="arrow"></div></label>
+          <label for="degree--up-2"><div class="arrow"></div></label>
+        </li>
+      </ul>
+    </div>
+  </label>
+</section>
+	<div class="outermost">
+		<div class="backdrop">
+			<div class="login_box">
+				<form  action="{% url 'about:login' %}" class="login_form validate-form" method="POST" autocomplete="on">
+                    {% csrf_token %}
+                    <img class="login_form_logo" src={% static 'about/logo.jpg' %} alt="form logo">
+						<span class="login_form_title">
+							<strong>LOG IN</strong>
+						</span>
+						<div class="wrap-input validate-input data-validate="Enter UIN">
+							<input class="_input" type="number" min="1" name="UIN" placeholder="Identification Number" required>
+							<span class="focus_input">
+								<i class="fa fa-user icon-style" style="font-size: 22px;color:white">
+								</i>
+							</span>
+						</div> 
+						<div class="wrap-input validate-input data-validate="Enter password">
+							<input class="_input" type="password" name="password" placeholder="Password" required>
+							<span class="focus_input">
+								<i class="fa fa-lock icon-style" style="font-size: 22px;color:white">
+								</i>
+							</span>
+						</div> 
+						<div class="form_checkbox">
+							<input type="checkbox" id="box1" name="remember-me">
+							<label class="label_checkbox" for="box1">
+								Remember me
+							</label>
+						</div>
+						<div class="container_login_btn">
+							<button class="login_btn"><strong>Login</strong></button>   
+						</div>
+						<div class="text-center">
+							<a class="txt1" href="{% url 'about:forgot' %}">
+								Forgot Password?
+							</a>
+						</div>
+				</form>
+			</div>
+		</div>
+	</div>
+	<div id="dropDownSelect1"></div>
+	<script src="first.js"></script>
+</body>
+</html>

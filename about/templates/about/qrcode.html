@@ -1,0 +1,160 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<!-- including static files -->
+<link rel="stylesheet" type="text/css" href="{% static 'about/qrcode.css' %}" />
+<html lang="en">
+<head>
+	<title>QR Code</title>
+	<meta charset="UTF-8">
+<!-- below meta tag is for responsive design-->
+	<meta name="viewport" content="width-device-width, initial-scale=1">
+<!--CSS file included
+	<link rel="stylesheet" href="qrcode.css"> -->
+<!--bootstrap file inlcuded-->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<!-- JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<!-- icons included -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+	<section class="menu menu--circle">
+  <input type="checkbox" id="menu__active"/>
+  <label for="menu__active" class="menu__active">
+    <div class="menu__toggle">
+      <div class="icon">
+        <div class="hamburger"></div>
+      </div>
+    </div>
+    <input type="radio" name="arrow--up" id="degree--up-0"/>
+    <input type="radio" name="arrow--up" id="degree--up-1" />
+    <input type="radio" name="arrow--up" id="degree--up-2" />
+    <div class="menu__listings">
+      <ul class="circle">
+        <li>
+          <div class="placeholder">
+            <div class="upside">
+              <a href="upload.html" class="button" title="Upload"><i class="fa fa-upload"></i></a>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="placeholder">
+            <div class="upside">
+              <a href="{% url 'about:logout' %}" class="button" title="Log out"><i class="fa fa-sign-out"></i></a>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="placeholder">
+            <div class="upside">
+             <a href="login.html" class="button" title="Login"><i class="fa fa-sign-in"></i></a>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="placeholder">
+            <div class="upside">
+              <a href="login.html" class="button" title="Login"><i class="fa fa-sign-in"></i></a>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="placeholder">
+            <div class="upside">
+              <a href="login.html" class="button" title="Login"><i class="fa fa-sign-in"></i></a>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="placeholder">
+            <div class="upside">
+              <a href="login.html" class="button" title="Login"><i class="fa fa-sign-in"></i></a>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="placeholder">
+            <div class="upside">
+              <a href="login.html" class="button" title="Login"><i class="fa fa-sign-in"></i></a>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="placeholder">
+            <div class="upside">
+             <a href="qrcode.html" class="button" title="QR Code"><i class="fa fa-qrcode"></i></a>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="placeholder">
+            <div class="upside">
+              <a href="login.html" class="button" title="Login"><i class="fa fa-sign-in"></i></a>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="placeholder">
+            <div class="upside">
+              <a href="cng_pwd.html" class="button" title="Change Password"><i class="fa fa-user-circle"></i></a>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div class="menu__arrow menu__arrow--top">
+      <ul>
+        <li>
+          <label for="degree--up-0"><div class="arrow"></div></label>
+          <label for="degree--up-1"><div class="arrow"></div></label>
+          <label for="degree--up-2"><div class="arrow"></div></label>
+        </li>
+      </ul>
+    </div>
+  </label>
+</section>
+	<div class="outermost">
+		<div class="backdrop">
+			<div class="display_box">
+				<div class="qrcode">
+                <!-- login conditions will come here -->
+                    {% load qr_code %}
+                    {% qr_from_text qr_link size='20' image_format='png' %}
+                </div>
+				<div class="instructions-header">
+						<span class="instructions"> 
+							<strong>
+								INSTRUCTIONS:
+							</strong>
+						</span>
+					<ol class="list_starts">
+						<li class="points"><strong>This QR Code on scanning would give access to the folder containing the candidate's certificates.</strong></li>
+						<li class="points"><strong>Hold your device over a QR Code so that it’s clearly visible within your smartphone’s screen.
+						<br>Two things can happen when you correctly hold your smartphone over a QR Code.
+						</strong>
+							<ol type="a">
+								<li class="subpoints"><strong>The phone automatically scans the code.</strong></li>
+								<li class="subpoints"><strong>On some readers, you have to press a button to snap a picture, not unlike the button on your smartphone camera.</strong></li>
+							</ol>
+						</li>
+						<li class="points"><strong>The candidate should provide this QR Code(if possible printed) to the verificatin body at the time of verification of certificates.</strong></li>
+					</ol>
+				</div>
+					<div class="text-center container_print_btn">
+						<strong class="txt1">Click on the button to print the current page</strong>
+						<button class="print_btn" onclick="myFunction()"><strong>Print</strong></button> 
+						<p>Note: While printing please close the navigation bar at <strong>top-left</strong> for best experience</p> 
+					</div>
+			</div>
+		</div>
+	</div>
+	<script>
+		function myFunction() {
+		    window.print();
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,144 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<!-- including static files -->
+<link rel="stylesheet" type="text/css" href="{% static 'about/about.css' %}" />
+<html lang="en">
+<head>
+	<title>About</title>
+	<meta charset="UTF-8">
+<!-- below meta tag is for responsive design-->
+	<meta name="viewport" content="width-device-width, initial-scale=1">
+<!--CSS file included-->
+	<link rel="stylesheet" href="about.css">
+<!--bootstrap file inlcuded-->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<!-- JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<!-- icons included -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+	<section class="menu menu--circle">
+  <input type="checkbox" id="menu__active"/>
+  <label for="menu__active" class="menu__active">
+    <div class="menu__toggle">
+      <div class="icon">
+        <div class="hamburger"></div>
+      </div>
+    </div>
+    <input type="radio" name="arrow--up" id="degree--up-0"/>
+    <input type="radio" name="arrow--up" id="degree--up-1" />
+    <input type="radio" name="arrow--up" id="degree--up-2" />
+    <div class="menu__listings">
+      <ul class="circle">
+        <li>
+          <div class="placeholder">
+            <div class="upside">
+              <a href="login.html" class="button" title="Login"><i class="fa fa-sign-in"></i></a>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="placeholder">
+            <div class="upside">
+              <a href="login.html" class="button" title="Login"><i class="fa fa-sign-in"></i></a>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="placeholder">
+            <div class="upside">
+             <a href="login.html" class="button" title="Login"><i class="fa fa-sign-in"></i></a>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="placeholder">
+            <div class="upside">
+              <a href="login.html" class="button" title="Login"><i class="fa fa-sign-in"></i></a>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="placeholder">
+            <div class="upside">
+              <a href="login.html" class="button" title="Login"><i class="fa fa-sign-in"></i></a>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="placeholder">
+            <div class="upside">
+              <a href="login.html" class="button" title="Login"><i class="fa fa-sign-in"></i></a>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="placeholder">
+            <div class="upside">
+              <a href="about.html" class="button" title="Log out"><i class="fa fa-sign-out"></i></a>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="placeholder">
+            <div class="upside">
+             <a href="qrcode.html" class="button" title="QR Code"><i class="fa fa-qrcode"></i></a>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="placeholder">
+            <div class="upside">
+              <a href="upload.html" class="button" title="Upload"><i class="fa fa-upload"></i></a>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="placeholder">
+            <div class="upside">
+              <a href="login.html" class="button" title="Login"><i class="fa fa-sign-in"></i></a>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div class="menu__arrow menu__arrow--top">
+      <ul>
+        <li>
+          <label for="degree--up-0"><div class="arrow"></div></label>
+          <label for="degree--up-1"><div class="arrow"></div></label>
+          <label for="degree--up-2"><div class="arrow"></div></label>
+        </li>
+      </ul>
+    </div>
+  </label>
+</section>
+
+	<div class="outermost">
+		<div class="backdrop">
+			<div class="display_box">
+				  <div class="about-start"> 
+            <span class="about-header">
+                <strong>About</strong>
+            </span>
+            <p class="information">
+              <strong>This web portal aims at easing the process of verification when a candidate takes admission in any educational institute or switches between any working organizations. The main aim of this web portal is to reduce the hassle of carrying along the original certificates during the process of verification.</strong>
+            </p>
+            <h4><strong>Instructions to use this web portal:</strong></h4>
+            <ul class="list-start">
+              <li>The candidates would first have to login into the portal using the <strong>Unique Identity Number</strong> given to them by the <strong>Authorization body</strong></li>
+              <li>Once logged in, the candidate has the options to <strong>upload</strong>their personal certificates and then generate the <strong>QR code</strong>for their all certificates</li>
+              <li>The options of <strong>Login</strong>, <strong>Upload</strong>, <strong>QR code</strong> and <strong>Log out</strong> are present in the circular navigation window at the <strong>top-left</strong> of this page</li>
+              <li>Initially their is option of <strong>Login</strong> and when rotated, the navigation bar provides the user options of <strong>Upload, QR code</strong>and <strong>Log out</strong></li>
+              <li>Candidate can either scan the <strong>QR code</strong> or get it printed with the options available in the portal itself and present it to the verification body at the time of verification</li>
+              <li>The <strong>Qr code</strong> on scanning will give access to a folder containing the certificates of the candidates which can be further used by the joining body as per requirements</li>
+            </ul>
+          </div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,189 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<!-- including static files -->
+<link rel="stylesheet" type="text/css" href="{% static 'about/forgot.css' %}" />
+<html lang="en">
+<head>
+	<title>Forgot Password</title>
+	<meta charset="UTF-8">
+<!-- below meta tag is for responsive design-->
+	<meta name="viewport" content="width-device-width, initial-scale=1">
+<!--CSS file included-->
+	<link rel="stylesheet" href="forgot.css">
+<!--bootstrap file inlcuded-->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<!-- JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<!-- icons included -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<!-- ========================= -->
+  <link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+  <script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+  <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+
+</head>
+<body>
+	<section class="menu menu--circle">
+  <input type="checkbox" id="menu__active"/>
+  <label for="menu__active" class="menu__active">
+    <div class="menu__toggle">
+      <div class="icon">
+        <div class="hamburger"></div>
+      </div>
+    </div>
+    <input type="radio" name="arrow--up" id="degree--up-0"/>
+    <input type="radio" name="arrow--up" id="degree--up-1" />
+    <input type="radio" name="arrow--up" id="degree--up-2" />
+    <div class="menu__listings">
+      <ul class="circle">
+        <li>
+          <div class="placeholder">
+            <div class="upside">
+              <a href="login.html" class="button" title="Login"><i class="fa fa-sign-in"></i></a>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="placeholder">
+            <div class="upside">
+              <a href="login.html" class="button" title="Login"><i class="fa fa-sign-in"></i></a>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="placeholder">
+            <div class="upside">
+             <a href="login.html" class="button" title="Login"><i class="fa fa-sign-in"></i></a>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="placeholder">
+            <div class="upside">
+              <a href="login.html" class="button" title="Login"><i class="fa fa-sign-in"></i></a>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="placeholder">
+            <div class="upside">
+              <a href="login.html" class="button" title="Login"><i class="fa fa-sign-in"></i></a>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="placeholder">
+            <div class="upside">
+              <a href="login.html" class="button" title="Login"><i class="fa fa-sign-in"></i></a>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="placeholder">
+            <div class="upside">
+              <a href="{% url 'about:logout' %}" class="button" title="Log out"><i class="fa fa-sign-out"></i></a>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="placeholder">
+            <div class="upside">
+             <a href="qrcode.html" class="button" title="QR Code"><i class="fa fa-qrcode"></i></a>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="placeholder">
+            <div class="upside">
+              <a href="upload.html" class="button" title="Upload"><i class="fa fa-upload"></i></a>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="placeholder">
+            <div class="upside">
+              <a href="login.html" class="button" title="Login"><i class="fa fa-sign-in"></i></a>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div class="menu__arrow menu__arrow--top">
+      <ul>
+        <li>
+          <label for="degree--up-0"><div class="arrow"></div></label>
+          <label for="degree--up-1"><div class="arrow"></div></label>
+          <label for="degree--up-2"><div class="arrow"></div></label>
+        </li>
+      </ul>
+    </div>
+  </label>
+</section>
+
+	<div class="outermost">
+		<div class="backdrop">
+			<div class="display_box">
+                <div class="container">
+                <h3>Answer the Security Question</h3>
+                  <!-- Standard Form -->
+                  <h4>Enter UIN</h4>
+                  <form action="{% url 'about:forgot' %}" method="post">
+                    {% csrf_token %}
+                      <div class="wrap-input validate-input data-validate="Enter UIN">
+							<input class="_input" type="number" name="UIN" placeholder="UIN" required>
+							<span class="focus_input">
+								<i class="fa fa-user icon-style" style="font-size: 22px;color:white">
+								</i>
+							</span>
+                      </div>
+                    <h4>What was the name of your first pet?</h4>
+                      <div class="wrap-input validate-input data-validate="Enter answer">
+							<input class="_input" type="text" name="answer" placeholder="Answer" required>
+                      </div>
+                    <h4>Enter your new password</h4>
+                      <div class="wrap-input validate-input data-validate="Enter password">
+							<input class="_input" type="text" name="password" placeholder="Password" required>
+							<span class="focus_input">
+								<i class="fa fa-lock icon-style" style="font-size: 22px;color:white">
+								</i>
+							</span>
+						</div>
+                <h4></h4>
+                      <button type="submit" class="btn btn-sm btn-primary">Submit</button>
+                    </div>
+                  </form>
+
+                  <!-- Drop Zone
+                  url 'about:forgot' %}
+                  <h4>Or drag and drop files below</h4>
+                  <div class="upload-drop-zone" id="drop-zone">
+                    Just drag and drop files here
+                  </div> -->
+
+                  <!-- Progress Bar
+                  <div class="progress">
+                    <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
+                      <span class="sr-only">70% Complete</span>
+                    </div>
+                  </div> -->
+
+                  <!-- Upload Finished
+                  <div class="js-upload-finished">
+                    <h3>Processed files</h3>
+                    <div class="list-group">
+                      <a href="#" class="list-group-item list-group-item-success"><span class="badge alert-success pull-right">Success</span>image-01.jpg</a>
+                      <a href="#" class="list-group-item list-group-item-success"><span class="badge alert-success pull-right">Success</span>image-02.jpg</a>
+                    </div>
+                  </div> -->
+                </div>
+              </div>
+            </div> <!-- /container -->
+      </div>
+    </div>
+  </div>
+    <script src={% static 'about/forgot.css' %}></script>
+</body>
+</html>
